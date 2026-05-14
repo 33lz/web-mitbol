@@ -51,7 +51,7 @@
   });
 
   /* ---- SMOOTH SCROLL FOR ALL ANCHOR LINKS ---- */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('a[href^="#"]:not(.sector-link)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
@@ -143,9 +143,9 @@
   const fichasData = {
     'btn-ficha-1': {
       cat: 'Transmisión Eléctrica',
-      title: 'Subestaciones de Alta Tensión',
-      img: 'transmission_lines.png',
-      desc: 'MITBOL ha diseñado y construido múltiples subestaciones de potencia en el rango de 69 kV a 500 kV, implementando equipos GIS (Gas Insulated Switchgear) y AIS (Air Insulated Switchgear) bajo normativa IEC 62271 e IEEE C57. Los proyectos incluyen ingeniería de detalle, suministro de equipos, obra civil, montaje eléctrico, sistemas de control y protección, comunicaciones y puesta en marcha.',
+      title: 'Proyecto Parque Eólico',
+      img: 'assets/0.jpg',
+      desc: 'No. WL-CI-2023-02 Servicio de Instalacion del sistema de proteccion Atmosferica y pues a tierra y de la red colectora de media tension, fibra optica e interconexiones lectricas de baja tension en aerogeneradores (incluye pruebas)- parque aólico warnes II. .',
       specs: [
         { label: 'Tensión', val: '69 kV – 500 kV' },
         { label: 'Tecnología', val: 'GIS / AIS' },
@@ -158,8 +158,8 @@
     'btn-ficha-2': {
       cat: 'Transmisión Eléctrica',
       title: 'Líneas de Transmisión',
-      img: 'transmission_lines.png',
-      desc: 'Tendido, montaje y puesta en marcha de líneas aéreas de transmisión de media y alta tensión en terrenos con alta complejidad topográfica. Incluye diseño de trazado, cimentaciones, erección de torres, tendido de conductor, obra civil y pruebas de energización, con personal certificado y gestión HSE de primer nivel.',
+      img: 'assets/1.jpg',
+      desc: 'ELF No. 126-92754/2025 (2da. Convocatoria) Contratación De Desmontaje De Estructuras Y Retiro De Linea, Montaje De Estructuras Y Tendido De Linea Ii Proyecto Repotenciacion Linea 115 Kv Subestación Arocagua - Subestación Central.',
       specs: [
         { label: 'Tensión', val: 'Media y Alta Tensión' },
         { label: 'Tipo', val: 'Aérea – Tower Line' },
@@ -172,8 +172,8 @@
     'btn-ficha-3': {
       cat: 'Energías Renovables',
       title: 'Plantas Solares Fotovoltaicas',
-      img: 'solar_plant.png',
-      desc: 'Construcción e integración de plantas de generación solar fotovoltaica con conexión a red, incluyendo paneles FV, inversores string/central, transformadores de potencia, subestación de evacuación, sistema SCADA, telemetría y protecciones. MITBOL aporta desde la ingeniería de detalle hasta el comisionamiento y puesta en marcha.',
+      img: 'assets/2.jpg',
+      desc: 'Construcción e integración de plantas de generación solar fotovoltaica con conexión a red, incluyendo paneles FV, inversores string/central, transformadores de potencia, subestación de evacuación, sistema SCADA, telemetría y protecciones. MITBOL aporta desde la ingeniería de detalle hasta el comisionamiento y puesta en marchaELF No. 55-78925/2024 (2da.Convocatoria) Se-Contratación De Servicio De Tendido De Cable Subterráneo A.T. Y Tendido De Fibra Óptica Subterránea Para El Proyecto “Construcción Línea Subterránea S/E Rafael Urquidi - S/E Alalay 115kv.”.',
       specs: [
         { label: 'Tecnología', val: 'Solar FV – Grid-tie' },
         { label: 'Componentes', val: 'Paneles · Inversores · Trafo' },
@@ -186,8 +186,8 @@
     'btn-ficha-4': {
       cat: 'Energías Renovables',
       title: 'Parques Eólicos',
-      img: 'wind_farm.png',
-      desc: 'Participación en la construcción e integración de parques eólicos en Bolivia, incluyendo obras civiles, montaje de aerogeneradores, cableado de media tensión, subestaciones, sistemas de control integrado y gestión de la red de comunicaciones. Contribución directa a la diversificación de la matriz eléctrica nacional.',
+      img: 'assets/3.jpg',
+      desc: 'Ejecucion De Obras Civiles Y Electromecanicas De La Subestacion Elevadora 60 Mw Uyuni 230 Kv. Construccion De Terraplen Y Losas De Hormigon Armado Para Apoyo De Power Station Planta Solar Fotovoltaica 60 Mw. En Uyuni – Potosi.',
       specs: [
         { label: 'Tecnología', val: 'Eólico – Aerogeneradores' },
         { label: 'Obras', val: 'Civil · Montaje · Cableado MT' },
@@ -200,8 +200,8 @@
     'btn-ficha-5': {
       cat: 'Infraestructura Industrial',
       title: 'Plantas Industriales',
-      img: 'industrial_plant.png',
-      desc: 'Ingeniería, construcción y montaje de plantas de proceso para los sectores petroquímico, minero y cementero. MITBOL gestiona proyectos EPC/EPCM de alta complejidad, integrando diseño multidisciplinario, procura internacional, obras civiles industriales, montaje electromecánico, instrumentación, control y puesta en marcha.',
+      img: 'assets/4.jpg',
+      desc: 'Planta De Generacion Electrica / Turbogeneradores Con G.N. Refineria Guillermo Elder Bell. Planta De Generacion Electrica / Turbogeneradores Con G.N. Refineria Gualberto Villarroel.',
       specs: [
         { label: 'Sectores', val: 'Oil&Gas · Minería · Cemento' },
         { label: 'Servicios', val: 'Ing. · Civil · Montaje · Inst.' },
@@ -214,8 +214,8 @@
     'btn-ficha-6': {
       cat: 'Integración Tecnológica',
       title: 'Integración SCADA y Comunicaciones',
-      img: 'hero_energy.png',
-      desc: 'Diseño e implementación de sistemas de supervisión, control y adquisición de datos (SCADA) para plantas industriales y redes eléctricas. Incluye integración de PLC, DCS, RTUs, redes industriales Ethernet/fibra óptica, sistemas de comunicación IEC 61850, ciberseguridad OT y automatización de procesos bajo estándares internacionales.',
+      img: 'assets/5.jpg',
+      desc: 'Contrato Nº 018/2019 Construccion De Obras Civiles Y Montaje Electromecanico Subestacion Yapacani "Proyecto P151 – Subestación 230/115 Kv. Yapacani".',
       specs: [
         { label: 'Sistemas', val: 'SCADA · PLC · DCS · RTU' },
         { label: 'Protocolo', val: 'IEC 61850 · DNP3 · Modbus' },
@@ -240,7 +240,7 @@
       <h2 class="modal-title">${data.title}</h2>
       <p class="modal-desc">${data.desc}</p>
       <div class="modal-specs-grid">${specsHTML}</div>
-      <a href="#contacto" class="btn-primary" onclick="document.getElementById('modalOverlay').classList.remove('show')">Solicitar Propuesta →</a>
+      <a href="#contacto" class="btn-primary" onclick="document.getElementById('modalOverlay').classList.remove('show');document.body.style.overflow=''">Solicitar Propuesta →</a>
     `;
   }
 
@@ -269,6 +269,107 @@
   Object.keys(fichasData).forEach(btnId => {
     const btn = document.getElementById(btnId);
     if (btn) btn.addEventListener('click', () => openModal(btnId));
+  });
+
+  /* ---- SECTORES MODAL ---- */
+  const sectoresData = {
+    'sec-energia-link': {
+      cat: 'Energía',
+      title: 'Sector Energía',
+      img: 'transmission_lines.png',
+      desc: 'Generación, transmisión, distribución y renovables. MITBOL ofrece soluciones integrales en infraestructura eléctrica de media y alta tensión, subestaciones GIS/AIS, líneas de transmisión, plantas de generación convencional y renovable, sistemas de protección, control y automatización de redes.',
+      specs: [
+        { label: 'Tensión', val: '69 kV – 500 kV' },
+        { label: 'Subestaciones', val: 'GIS / AIS / Híbridas' },
+        { label: 'Generación', val: 'Convencional y Renovable' },
+        { label: 'Normas', val: 'IEC · IEEE · NFPA' },
+        { label: 'Modalidad', val: 'EPC / EPCM' },
+        { label: 'Servicios', val: 'Ing. · Procura · Construcción · Com.' },
+      ]
+    },
+    'sec-oilgas-link': {
+      cat: 'Oil & Gas',
+      title: 'Sector Oil & Gas',
+      img: 'assets/9.jpg',
+      desc: 'Infraestructura de superficie, automatización, comunicaciones y obras industriales para el sector hidrocarburos. MITBOL ejecuta proyectos de montaje electromecánico, instrumentación, tuberías, sistemas de control, gasoductos, plantas de procesamiento y refinerías.',
+      specs: [
+        { label: 'Infraestructura', val: 'Superficie y Procesamiento' },
+        { label: 'Automatización', val: 'PLC · DCS · SCADA' },
+        { label: 'Comunicaciones', val: 'Fibra óptica · Radio · IoT' },
+        { label: 'Normas', val: 'API · ASME · NFPA' },
+        { label: 'Modalidad', val: 'EPC / EPCM' },
+        { label: 'Países', val: 'Bolivia · Chile · Perú · Paraguay' },
+      ]
+    },
+    'sec-petro-link': {
+      cat: 'Petroquímica',
+      title: 'Sector Petroquímico',
+      img: 'assets/8.jpg',
+      desc: 'Montaje, instrumentación, control y sistemas eléctricos para la industria petroquímica. MITBOL integra plantas de proceso con estándares internacionales de calidad, seguridad y eficiencia operativa.',
+      specs: [
+        { label: 'Montaje', val: 'Electromecánico y Estructural' },
+        { label: 'Instrumentación', val: 'Analítica · Control · Válvulas' },
+        { label: 'Sistemas Eléctricos', val: 'MT/BT · Tableros · CCM' },
+        { label: 'Normas', val: 'ASME · API · IEC' },
+        { label: 'Modalidad', val: 'EPC / Llave en Mano' },
+        { label: 'Gestión', val: 'HSE · QA/QC · BIM' },
+      ]
+    },
+    'sec-mineria-link': {
+      cat: 'Minería',
+      title: 'Sector Minería',
+      img: 'hero_energy.png',
+      desc: 'Energía para minería, plantas industriales, automatización y telecomunicaciones. MITBOL proporciona soluciones eléctricas y de control para operaciones mineras, desde plantas concentradoras hasta sistemas de transporte y bombeo.',
+      specs: [
+        { label: 'Energía', val: 'Suministro y Distribución MT/BT' },
+        { label: 'Plantas', val: 'Concentradoras · Refinación' },
+        { label: 'Automatización', val: 'SCADA · PLC · Control de Procesos' },
+        { label: 'Telecomunicaciones', val: 'Redes Industriales · Fibra' },
+        { label: 'Modalidad', val: 'EPC / EPCM' },
+        { label: 'Países', val: 'Bolivia · Chile · Perú' },
+      ]
+    },
+    'sec-cemento-link': {
+      cat: 'Cemento',
+      title: 'Sector Cemento',
+      img: 'assets/6.jpg',
+      desc: 'Sistemas eléctricos, control, modernización y mantenimiento para la industria cementera. MITBOL ofrece ingeniería de detalle, montaje de equipos, sistemas de automatización y mejoras de eficiencia energética en plantas de cemento.',
+      specs: [
+        { label: 'Sistemas Eléctricos', val: 'MT/BT · Subestaciones' },
+        { label: 'Control', val: 'DCS · PLC · SCADA' },
+        { label: 'Modernización', val: 'Retrofit · Eficiencia Energética' },
+        { label: 'Mantenimiento', val: 'Predictivo y Correctivo' },
+        { label: 'Modalidad', val: 'EPC / Ingeniería' },
+        { label: 'Normas', val: 'IEC · ISO · NFPA' },
+      ]
+    },
+    'sec-infra-link': {
+      cat: 'Infraestructura Tecnológica',
+      title: 'Infraestructura Tecnológica',
+      img: 'solar_plant.png',
+      desc: 'Centros de control, fibra óptica, redes industriales, telemetría y centros de datos. MITBOL integra infraestructura OT/TIC crítica para la operación remota, monitoreo en tiempo real y gestión inteligente de activos industriales.',
+      specs: [
+        { label: 'Centros de Control', val: 'SCADA · Salas de Operación' },
+        { label: 'Redes', val: 'Industrial Ethernet · Fibra Óptica' },
+        { label: 'Telemetría', val: 'RTU · IoT · Comunicaciones' },
+        { label: 'Ciberseguridad', val: 'OT Security – IEC 62443' },
+        { label: 'Modalidad', val: 'Integración Llave en Mano' },
+        { label: 'Países', val: 'Bolivia · Chile · Perú · Paraguay' },
+      ]
+    },
+  };
+
+  Object.keys(sectoresData).forEach(linkId => {
+    const link = document.getElementById(linkId);
+    if (link) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const data = sectoresData[linkId];
+        modalContent.innerHTML = buildModalHTML(data);
+        modalOverlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    }
   });
 
   /* ---- CONTACT FORM VALIDATION & SUBMISSION ---- */
@@ -318,30 +419,110 @@
         const btn = document.getElementById('btn-submit-contact');
         btn.disabled = true;
         btn.querySelector('.btn-label').textContent = 'Enviando...';
-        // Simulate async send
-        setTimeout(() => {
-          contactForm.reset();
-          contactForm.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-          contactForm.querySelectorAll('.form-error').forEach(el => el.textContent = '');
-          btn.disabled = false;
-          btn.querySelector('.btn-label').textContent = 'Enviar Consulta';
-          formSuccess.classList.add('show');
-          setTimeout(() => formSuccess.classList.remove('show'), 5000);
-        }, 1200);
+
+        const data = new URLSearchParams(new FormData(contactForm));
+
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data })
+          .then(() => {
+            contactForm.reset();
+            contactForm.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+            contactForm.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+            btn.disabled = false;
+            btn.querySelector('.btn-label').textContent = 'Enviar Consulta';
+            formSuccess.classList.add('show');
+            setTimeout(() => formSuccess.classList.remove('show'), 5000);
+          })
+          .catch(() => {
+            btn.disabled = false;
+            btn.querySelector('.btn-label').textContent = 'Enviar Consulta';
+            alert('Error al enviar. Intente nuevamente.');
+          });
       }
     });
   }
 
-  /* ---- PAIS CARDS HOVER ---- */
+  /* ---- PAIS CARDS – MODAL CON INFO Y WHATSAPP ---- */
+  const paisesData = {
+    'pais-bolivia': {
+      flag: '🇧🇴',
+      name: 'Bolivia',
+      sede: 'Sede Principal',
+      ciudad: 'La Paz, Bolivia',
+      email: 'contacto@mitbol.bo',
+      telefono: '+591 2 200 0000',
+      whatsapp: '59122000000',
+      sectores: ['Renovables y transmisión', 'Energía eléctrica', 'Minería', 'Oil & Gas'],
+    },
+    'pais-chile': {
+      flag: '🇨🇱',
+      name: 'Chile',
+      sede: 'Oficina Regional',
+      ciudad: 'Santiago, Chile',
+      email: 'chile@mitbol.bo',
+      telefono: '+591 2 200 0000',
+      whatsapp: '59122000000',
+      sectores: ['Integración tecnológica', 'Obras industriales'],
+    },
+    'pais-peru': {
+      flag: '🇵🇪',
+      name: 'Perú',
+      sede: 'Oficina Regional',
+      ciudad: 'Lima, Perú',
+      email: 'peru@mitbol.bo',
+      telefono: '+591 2 200 0000',
+      whatsapp: '59122000000',
+      sectores: ['Ingeniería y automatización', 'Construcción industrial'],
+    },
+    'pais-paraguay': {
+      flag: '🇵🇾',
+      name: 'Paraguay',
+      sede: 'Oficina Regional',
+      ciudad: 'Asunción, Paraguay',
+      email: 'paraguay@mitbol.bo',
+      telefono: '+595 985 446 336',
+      whatsapp: '595985446336',
+      sectores: ['Plantas industriales', 'Infraestructura energética'],
+    },
+  };
+
+  function buildPaisModalHTML(data) {
+    const sectoresList = data.sectores.map(s => `<li>${s}</li>`).join('');
+    const teleHTML = data.telefono
+      ? `<div class="modal-pais-item"><span class="modal-pais-label">Teléfono</span><a href="tel:${data.telefono.replace(/\s/g, '')}" class="modal-pais-link">${data.telefono}</a></div>`
+      : '';
+    const waHTML = data.whatsapp
+      ? `<div class="modal-pais-item"><span class="modal-pais-label">WhatsApp</span><a href="https://wa.me/${data.whatsapp}" target="_blank" rel="noopener noreferrer" class="modal-pais-link wa-link">💬 Enviar WhatsApp</a></div>`
+      : '';
+    return `
+      <div class="modal-pais-header">
+        <span class="modal-pais-flag">${data.flag}</span>
+        <div>
+          <div class="modal-cat" style="margin-bottom:0">${data.sede}</div>
+          <h2 class="modal-title" style="margin-bottom:4px">${data.name}</h2>
+        </div>
+      </div>
+      <p class="modal-desc" style="margin-top:16px"><strong>${data.ciudad}</strong></p>
+      <div class="modal-pais-grid">
+        <div class="modal-pais-item"><span class="modal-pais-label">Email</span><a href="mailto:${data.email}" class="modal-pais-link">${data.email}</a></div>
+        ${teleHTML}
+        ${waHTML}
+      </div>
+      <div style="margin-top:20px">
+        <span class="modal-pais-label">Sectores</span>
+        <ul class="modal-pais-sectores">${sectoresList}</ul>
+      </div>
+      <a href="#contacto" class="btn-primary" style="margin-top:24px" onclick="document.getElementById('modalOverlay').classList.remove('show');document.body.style.overflow=''">Solicitar Propuesta →</a>
+    `;
+  }
+
   const paisCards = document.querySelectorAll('.pais-card');
   paisCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      paisCards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-    });
-    card.addEventListener('mouseleave', () => {
-      paisCards.forEach(c => c.classList.remove('active'));
-      document.getElementById('pais-bolivia').classList.add('active');
+    card.addEventListener('click', () => {
+      const data = paisesData[card.id];
+      if (!data) return;
+      modalContent.innerHTML = buildPaisModalHTML(data);
+      modalOverlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
     });
   });
 

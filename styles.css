@@ -943,7 +943,7 @@ input, textarea, select { font-family: inherit; }
   padding: 36px 24px;
   text-align: center;
   transition: var(--trans);
-  cursor: default;
+  cursor: pointer;
 }
 .pais-card:hover,
 .pais-card.active {
@@ -1328,9 +1328,18 @@ input, textarea, select { font-family: inherit; }
 .modal-spec-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-text-light); margin-bottom: 4px; }
 .modal-spec-val { font-size: 1rem; font-weight: 700; color: var(--clr-primary); }
 
-/* ============================================================
-   SCROLL TO TOP
-   ============================================================ */
+/* ---- MODAL PAIS ---- */
+.modal-pais-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.modal-pais-flag { font-size: 3rem; line-height: 1; }
+.modal-pais-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+.modal-pais-item { background: var(--clr-light); border-radius: var(--radius-md); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
+.modal-pais-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-text-light); }
+.modal-pais-link { font-size: 0.93rem; font-weight: 600; color: var(--clr-primary); text-decoration: none; }
+.modal-pais-link:hover { color: var(--clr-accent); }
+.modal-pais-link.wa-link { color: #25D366; }
+.modal-pais-link.wa-link:hover { color: #128C7E; }
+.modal-pais-sectores { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.modal-pais-sectores li { background: var(--clr-light); border-radius: var(--radius-sm); padding: 6px 14px; font-size: 0.85rem; color: var(--clr-text-mid); }
 .scroll-top {
   position: fixed;
   bottom: 32px; right: 32px;
@@ -1385,14 +1394,51 @@ input, textarea, select { font-family: inherit; }
   .footer-links-wrap { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 640px) {
+  .sectores-grid { grid-template-columns: 1fr; }
+  .sector-card { min-height: 220px; }
+  .sector-desc, .sector-link { opacity: 1; transform: none; }
+  .paises-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pais-card { padding: 24px 16px; }
+  .pais-flag { font-size: 2.2rem; margin-bottom: 10px; }
+  .pais-name { font-size: 1.1rem; }
+  .pais-sede { font-size: 0.78rem; }
+  .pais-sectors li { font-size: 0.78rem; }
+  .modal { max-width: 100%; border-radius: var(--radius-lg); }
+  .modal-content { padding: 24px; }
+  .modal-header-img { height: 160px; }
+  .modal-pais-item { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .modal-pais-sectores li { font-size: 0.78rem; padding: 4px 10px; }
+  .footer-logo-img { height: 56px; }
+  .footer-top { gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero-scroll-indicator { display: none; }
+  .sector-content { padding: 20px; }
+  .sector-title { font-size: 1.1rem; }
+  .section-header { margin-bottom: 32px; }
+}
+
 @media (max-width: 480px) {
   :root { --nav-h: 60px; }
+  .nav-logo-img { height: 48px; }
   .paises-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 92vh; }
   .hero-actions { flex-direction: column; }
-  .hero-stats { flex-direction: column; gap: 0; }
+  .hero-stats { flex-direction: column; gap: 0; width: 100%; }
+  .stat-item { padding: 14px 20px; }
   .stat-divider { width: 80%; height: 1px; margin: 0 auto; }
+  .destacado { gap: 24px; }
   .destacado-specs { gap: 20px; }
-  .modal-content { padding: 28px; }
+  .destacado-img-wrap { min-height: 200px; }
+  .office-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .quick-btn { font-size: 0.82rem; padding: 12px 16px; }
+  .contact-offices { margin-bottom: 8px; }
+  .modal-content { padding: 20px; }
+  .modal-header-img { height: 140px; }
+  .modal-title { font-size: 1.3rem; }
   .modal-specs-grid { grid-template-columns: 1fr; }
-  .scroll-top { bottom: 16px; right: 16px; }
+  .modal-pais-flag { font-size: 2.4rem; }
+  .scroll-top { bottom: 16px; right: 16px; width: 42px; height: 42px; font-size: 1rem; }
+  .footer-links-wrap { gap: 24px; }
+  .footer-col-title { font-size: 0.8rem; }
 }
