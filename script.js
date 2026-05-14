@@ -444,43 +444,47 @@
   /* ---- PAIS CARDS – MODAL CON INFO Y WHATSAPP ---- */
   const paisesData = {
     'pais-bolivia': {
-      flag: '🇧🇴',
+      flag: 'assets/Bolivia.png',
+      flagAlt: 'Bolivia',
       name: 'Bolivia',
       sede: 'Sede Principal',
-      ciudad: 'La Paz, Bolivia',
-      email: 'contacto@mitbol.bo',
-      telefono: '+591 2 200 0000',
-      whatsapp: '59122000000',
+      ciudad: 'Cochabamba, Bolivia',
+      email: 'administracion@mitbol.com',
+      telefono: '+591 74360919',
+      whatsapp: '59174360919',
       sectores: ['Renovables y transmisión', 'Energía eléctrica', 'Minería', 'Oil & Gas'],
     },
     'pais-chile': {
-      flag: '🇨🇱',
+      flag: 'assets/chile.png',
+      flagAlt: 'Chile',
       name: 'Chile',
       sede: 'Oficina Regional',
       ciudad: 'Santiago, Chile',
-      email: 'chile@mitbol.bo',
-      telefono: '+591 2 200 0000',
-      whatsapp: '59122000000',
+      email: 'administracion@mitbol.com',
+      telefono: '+591 74360919',
+      whatsapp: '59174360919',
       sectores: ['Integración tecnológica', 'Obras industriales'],
     },
     'pais-peru': {
-      flag: '🇵🇪',
+      flag: 'assets/peru.png',
+      flagAlt: 'Perú',
       name: 'Perú',
       sede: 'Oficina Regional',
       ciudad: 'Lima, Perú',
-      email: 'peru@mitbol.bo',
-      telefono: '+591 2 200 0000',
-      whatsapp: '59122000000',
+      email: 'administracion@mitbol.com',
+      telefono: '+591 74360919',
+      whatsapp: '59174360919',
       sectores: ['Ingeniería y automatización', 'Construcción industrial'],
     },
     'pais-paraguay': {
-      flag: '🇵🇾',
+      flag: 'assets/paraguay.png',
+      flagAlt: 'Paraguay',
       name: 'Paraguay',
       sede: 'Oficina Regional',
       ciudad: 'Asunción, Paraguay',
-      email: 'paraguay@mitbol.bo',
-      telefono: '+595 985 446 336',
-      whatsapp: '595985446336',
+      email: 'administracion@mitbol.com',
+      telefono: '+591 74360919',
+      whatsapp: '59174360919',
       sectores: ['Plantas industriales', 'Infraestructura energética'],
     },
   };
@@ -495,7 +499,7 @@
       : '';
     return `
       <div class="modal-pais-header">
-        <span class="modal-pais-flag">${data.flag}</span>
+        <img src="${data.flag}" alt="${data.flagAlt}" class="modal-pais-flag" />
         <div>
           <div class="modal-cat" style="margin-bottom:0">${data.sede}</div>
           <h2 class="modal-title" style="margin-bottom:4px">${data.name}</h2>

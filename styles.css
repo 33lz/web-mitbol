@@ -958,7 +958,7 @@ input, textarea, select { font-family: inherit; }
 .pais-card.active .pais-sede { color: var(--clr-accent); }
 .pais-card:hover .pais-sectors li,
 .pais-card.active .pais-sectors li { color: rgba(255,255,255,0.75); }
-.pais-flag { font-size: 3rem; margin-bottom: 16px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+.pais-flag { width: 56px; height: auto; margin: 0 auto 16px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
 .pais-name {
   font-family: var(--font-display);
   font-size: 1.4rem;
@@ -1154,7 +1154,7 @@ input, textarea, select { font-family: inherit; }
   padding: 18px 0;
   border-bottom: 1px solid var(--clr-light2);
 }
-.office-flag { font-size: 1.8rem; flex-shrink: 0; }
+.office-flag { width: 32px; height: auto; flex-shrink: 0; align-self: flex-start; margin-top: 2px; }
 .office-detail { display: flex; flex-direction: column; gap: 2px; }
 .office-detail strong { font-size: 0.95rem; color: var(--clr-primary); }
 .office-detail p { font-size: 0.85rem; color: var(--clr-text-light); }
@@ -1330,7 +1330,7 @@ input, textarea, select { font-family: inherit; }
 
 /* ---- MODAL PAIS ---- */
 .modal-pais-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-.modal-pais-flag { font-size: 3rem; line-height: 1; }
+.modal-pais-flag { width: 48px; height: auto; flex-shrink: 0; }
 .modal-pais-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
 .modal-pais-item { background: var(--clr-light); border-radius: var(--radius-md); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
 .modal-pais-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-text-light); }
